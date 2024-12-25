@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional To-Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>To-Do App</h1>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Task Management Area -->
+    <aside class="sidebar">
+      <h2>Manage Your Tasks</h2>
+      <div class="task-input">
+        <input type="text" id="task-input" placeholder="Add a new task">
+        <button id="add-task-btn">Add</button>
+      </div>
+      <h3>Your Tasks</h3>
+      <ul id="task-list" class="task-list"></ul>
+    </aside>
+
+    <!-- Sliding Pages -->
+    <main class="main">
+      <nav class="navbar">
+        <button class="nav-btn" data-target="#home">Home</button>
+        <button class="nav-btn" data-target="#completed">Completed</button>
+        <button class="nav-btn" data-target="#statistics">Statistics</button>
+        <button class="nav-btn" data-target="#profile">Profile</button>
+        <button class="nav-btn" data-target="#feedback">Feedback</button>
+        <button class="nav-btn" data-target="#settings">Settings</button>
+      </nav>
+
+      <!-- Pages -->
+      <section id="home" class="page active">
+        <h2>Welcome to the To-Do App</h2>
+        <p>Organize your life with ease. Start by navigating to the Tasks page to add new tasks!</p>
+      </section>
+
+      <section id="completed" class="page">
+        <h2>Completed Tasks</h2>
+        <ul id="completed-list" class="task-list"></ul>
+      </section>
+
+      <section id="statistics" class="page">
+        <h2>Statistics</h2>
+        <p id="stats">You have <span id="total-tasks">0</span> tasks and <span id="completed-tasks">0</span> completed tasks.</p>
+      </section>
+
+      <section id="profile" class="page">
+        <h2>User Profile</h2>
+        <p>Manage your profile details here.</p>
+        <!-- Profile form can go here -->
+      </section>
+
+      <section id="feedback" class="page">
+        <h2>Feedback</h2>
+        <textarea id="feedback-input" placeholder="Your feedback..."></textarea>
+        <button id="submit-feedback-btn">Submit Feedback</button>
+      </section>
+
+      <section id="settings" class="page">
+        <h2>Settings</h2>
+        <label>
+          <input type="checkbox" id="dark-mode-toggle"> Enable Dark Mode
+        </label>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
